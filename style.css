@@ -1,0 +1,126 @@
+h1 {
+    font-size: 80px;
+    color: #545454;
+    display: inline;
+}
+
+h2 {
+    font-size: 32px;
+    display: inline;
+    font-weight: 700;
+    color: #A9A9A9;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;    
+    margin: 0px;
+    color: #545454;
+    font-size: 32px;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;    
+    margin: 0px;
+    color: #545454;
+    font-size: 24px;
+}
+
+p {
+    font-size: 20;
+    font-weight: 700;
+}
+
+hr { 
+    display: block;
+    border-style: inset;
+    border-width: 5px;
+    color: #5b9bd5;
+} 
+
+body {
+    /* background-color: #EFEFEF; */
+	background-image: url('Images/background.png');
+	background-repeat: repeat;
+    background-repeat: repeat;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.name {
+    margin-left: 10%;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: hb;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-me {
+    grid-area: am;
+    margin: auto;
+}
+
+.about-me > img {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 30%;
+}
+
+.about-img img {
+    padding-top: 12%;
+    padding-bottom: 12%;
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+.grid-foot {
+    grid-area: ff;
+    color: #545454;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.grid-foot a {
+    color: #545454;
+    text-decoration: none;
+}
+
+.grid-main {
+    display: grid;
+    align-items: stretch;
+	grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "hb hb hb hb hb hb hb hb hb hb hb hb"
+        "am am am am am am am am am am am am"
+        "pb pb pb pb pb pb pb pb pb pb pb pb"
+        " . mp mp mp mp mp mp mp mp mp mp  ."
+        " . pg pg pg pg pg pg pg pg pg pg  ."
+        "xp xp xp xp xp xp xp xp xp xp xp xp"
+        ".  x3 x3 x5 x5 x5 x5 x5 x5 x5 x5  ."
+        "x1 x1 x1 x1 x2 x2 x2 x2 x4 x4 x4  ."
+		"ff ff ff ff ff ff ff ff ff ff ff ff"
+}
+
+.grid-projects {
+    grid-area: pb;
+    background-color: #5b9bd5;
+    padding-left: 10%;
+}
+
+.links {
+    margin-right: 10%;
+    padding-top: 25px;
+}
+
+.links a {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
