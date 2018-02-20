@@ -31,9 +31,8 @@ p {
 }
 
 hr { 
-    border-style: inset;
-    border-width: 5px;
-    color: #5b9bd5;
+    border-width: 3px;
+    color: black;
 } 
 
 body {
@@ -53,9 +52,16 @@ body {
     line-height: 150%;
 }
 
-.linefooter{
+.lineprojects{
     border-top: 6px solid #adc2eb;
     border-bottom: 6px solid #2d5bb9;
+    grid-area: lp;
+    line-height: 150%;
+}
+
+.linefooter{
+    border-top: 6px solid #2d5bb9;
+    border-bottom: 6px solid #adc2eb;
     grid-area: lf;
     line-height: 150%;
 }
@@ -120,19 +126,15 @@ body {
         "hb hb hb hb hb hb hb hb hb hb hb hb"
         "lh lh lh lh lh lh lh lh lh lh lh lh"
         "ap ap ap ap ap am am am am am am am"
-        "lf lf lf lf lf lf lf lf lf lf lf lf"
+        "lp lp lp lp lp lp lp lp lp lp lp lp"
+        "sh sh sh sh sh sh sh sh sh sh sh sh"
         "pb pb pb pb pb pb pb pb pb pb pb pb"
-        " . mp mp mp mp mp mp mp mp mp mp  ."
-        " . pg pg pg pg pg pg pg pg pg pg  ."
-        "xp xp xp xp xp xp xp xp xp xp xp xp"
-        ".  x3 x3 x5 x5 x5 x5 x5 x5 x5 x5  ."
-        "x1 x1 x1 x1 x2 x2 x2 x2 x4 x4 x4  ."
+        "lf lf lf lf lf lf lf lf lf lf lf lf"
 		"ff ff ff ff ff ff ff ff ff ff ff ff"
 }
 
 .grid-projects {
     grid-area: pb;
-    background-color: #5b9bd5;
     padding-left: 10%;
 }
 
@@ -146,4 +148,59 @@ body {
     padding-left: 10px;
 }
 
+.grid-software {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "hb hb hb hb hb hb hb hb hb hb hb hb"
+        "lh lh lh lh lh lh lh lh lh lh lh lh"
+        "sh sh sh sh sh sh sh sh sh sh sh sh"
+        "lf lf lf lf lf lf lf lf lf lf lf lf"
+        "ff ff ff ff ff ff ff ff ff ff ff ff"
+}
 
+.software-header{
+    grid-area: sh;
+    padding-left: 10%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}

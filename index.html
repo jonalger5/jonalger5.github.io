@@ -7,11 +7,12 @@
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 	<div class="grid-main">
 		<header class="grid-header">
 			<div align="center">
-                    <h1> Jonathan Alger </h1>
+					<h1> Jonathan Alger </h1>                
                     <h2> GAME ENGINEER </h2>
 			</div>			
 		</header>
@@ -29,8 +30,31 @@
             </p>
         	
    	 	</div>   
+		<div class="lineprojects">
+		</div>
+
+		<div class="software-header">
+			<br>
+			<h3>Technical Projects</h3>
+		</div>
+
+		<div class="grid-projects">
+			<div class="row">
+				<div class="column software">
+					<a href="SoftwareProjects.html">
+						<div class="content">
+							<img src="Images/Software_Icon.png"  style="width:100%">
+							<h4 style="text-align: center;">Software Projects</h4>
+						</div>
+					</a>					
+				</div>
+
+			</div>
+		</div>
+		
 		<div class="linefooter">
 		</div>
+		
 		<!--
 			https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
 			https://www.w3schools.com/howto/howto_css_thumbnail.asp
@@ -39,5 +63,39 @@
 			<p><pre class="tab">jonathan alger &copy; 2018</pre></p>
 		</footer>
 	</div>
+
+	<script>
+		filterSelection("all")
+		function filterSelection(c) {
+		  var x, i;
+		  x = document.getElementsByClassName("column");
+		  if (c == "all") c = "";
+		  for (i = 0; i < x.length; i++) {
+		    w3RemoveClass(x[i], "show");
+		    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+		  }
+		}
+
+		function w3AddClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+		    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+		  }
+		}
+
+		function w3RemoveClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+		    while (arr1.indexOf(arr2[i]) > -1) {
+		      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+		    }
+		  }
+		  element.className = arr1.join(" ");
+		}
+	</script>
 </body>
 </html>
