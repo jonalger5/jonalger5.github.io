@@ -12,15 +12,13 @@ h2 {
 }
 
 h3 {
-    font-family: 'Roboto', sans-serif;    
-    margin: 0px;
+    font-family: 'Roboto', sans-serif;   
     color: #545454;
     font-size: 32px;
 }
 
 h4 {
     font-family: 'Roboto', sans-serif;    
-    margin: 0px;
     color: #545454;
     font-size: 24px;
 }
@@ -78,8 +76,7 @@ body {
 
 .about-me > img {
     padding-left: 10%;
-    padding-right: 5%;
-    width: 90%;
+    width: 80%;
 }
 
 
@@ -89,7 +86,7 @@ body {
     margin-bottom: 50px;
     width: 80%;
 
-    font-size: 32px;
+    font-size: 30px;
     
     color: #545454;
 }
@@ -157,12 +154,18 @@ body {
         "hb hb hb hb hb hb hb hb hb hb hb hb"
         "lh lh lh lh lh lh lh lh lh lh lh lh"
         "sh sh sh sh sh sh sh sh sh sh sh sh"
+        "hl hl hl hl hl hl hl hl hl hl hl hl"
         "lf lf lf lf lf lf lf lf lf lf lf lf"
         "ff ff ff ff ff ff ff ff ff ff ff ff"
 }
 
 .software-header{
     grid-area: sh;
+    padding-left: 10%;
+}
+
+.homelink{
+    grid-area: hl;
     padding-left: 10%;
 }
 
