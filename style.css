@@ -155,7 +155,7 @@ body {
         "lh lh lh lh lh lh lh lh lh lh lh lh"
         "sh sh sh sh sh sh sh sh sh sh sh sh"
         "hl hl hl hl hl hl hl hl hl hl hl hl"
-        "lf lf lf lf lf lf lf lf lf lf lf lf"
+        "lp lp lp lp lp lp lp lp lp lp lp lp"
         "ff ff ff ff ff ff ff ff ff ff ff ff"
 }
 
@@ -164,9 +164,65 @@ body {
     padding-left: 10%;
 }
 
+.software-header > img{
+    width: 80%;
+}
+
 .homelink{
     grid-area: hl;
     padding-left: 10%;
+}
+
+.grid-game {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "hb hb hb hb hb hb hb hb hb hb hb hb"
+        "lh lh lh lh lh lh lh lh lh lh lh lh"
+        "sh sh sh sh sh sh sh sh sh sh sh sh"
+        "gv gv gv gv gv gv gd gd gd gd gd gd"
+        ".  co co co co co co co co co co  ."
+        "hl hl hl hl hl hl hl hl hl hl hl hl"
+        "lp lp lp lp lp lp lp lp lp lp lp lp"
+        "ff ff ff ff ff ff ff ff ff ff ff ff"
+}
+
+.game-visual{
+    grid-area: gv;
+    padding-left: 20%;
+}
+
+.game-details{
+    grid-area: gd;
+    width: 80%;
+
+    font-size: 30px;
+    
+    color: #545454;
+}
+
+.game-details > p {
+    text-align: justify;
+    font-weight: 500;
+}
+
+.contributions {
+    grid-area: co;
+    padding-left: 5%;
+}
+
+.contributions p,li{
+    font-size: 24px;    
+    color: #545454;
+    text-align: justify;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contributions li{
+    width: 90%;
 }
 
 * {
@@ -206,4 +262,22 @@ body {
 /* The "show" class is added to the filtered elements */
 .show {
     display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
 }

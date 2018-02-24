@@ -36,6 +36,11 @@
 		<div class="software-header">
 			<br>
 			<h3>Technical Projects</h3>
+			<div id="myBtnContainer">
+			  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			  <button class="btn" onclick="filterSelection('software')"> Software</button>
+			  <button class="btn" onclick="filterSelection('games')"> Games</button>
+			</div>
 		</div>
 
 		<div class="grid-projects">
@@ -49,6 +54,14 @@
 					</a>					
 				</div>
 
+				<div class="column games">
+					<a href="LostBorderline.html">
+						<div class="content">
+							<img src="Images/LB_Icon.gif"  style="width:100%">
+							<h4 style="text-align: center;">Lost Borderline</h4>
+						</div>
+					</a>					
+				</div>
 			</div>
 		</div>
 		
@@ -95,6 +108,17 @@
 		    }
 		  }
 		  element.className = arr1.join(" ");
+		}
+
+		// Add active class to the current button (highlight it)
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function(){
+		    var current = document.getElementsByClassName("active");
+		    current[0].className = current[0].className.replace(" active", "");
+		    this.className += " active";
+		  });
 		}
 	</script>
 </body>
