@@ -57,6 +57,20 @@ body {
     line-height: 150%;
 }
 
+.lineworkxp{
+    border-top: 6px solid #2d5bb9;
+    border-bottom: 6px solid #adc2eb;
+    grid-area: lw;
+    line-height: 150%;
+}
+
+.linevolxp{
+    border-top: 6px solid #adc2eb;
+    border-bottom: 6px solid #2d5bb9;
+    grid-area: lv;
+    line-height: 150%;
+}
+
 .linefooter{
     border-top: 6px solid #2d5bb9;
     border-bottom: 6px solid #adc2eb;
@@ -126,12 +140,26 @@ body {
         "lp lp lp lp lp lp lp lp lp lp lp lp"
         "sh sh sh sh sh sh sh sh sh sh sh sh"
         "pb pb pb pb pb pb pb pb pb pb pb pb"
+        "lw lw lw lw lw lw lw lw lw lw lw lw"
+        "wx wx wx wx wx wx wx wx wx wx wx wx"
+        "lv lv lv lv lv lv lv lv lv lv lv lv"
+        "vx vx vx vx vx vx vx vx vx vx vx vx"
         "lf lf lf lf lf lf lf lf lf lf lf lf"
 		"ff ff ff ff ff ff ff ff ff ff ff ff"
 }
 
 .grid-projects {
     grid-area: pb;
+    padding-left: 10%;
+}
+
+.grid-workxp{
+    grid-area: wx;
+    padding-left: 10%;
+}
+
+.grid-volxp{
+    grid-area: vx;
     padding-left: 10%;
 }
 
@@ -154,9 +182,36 @@ body {
         "hb hb hb hb hb hb hb hb hb hb hb hb"
         "lh lh lh lh lh lh lh lh lh lh lh lh"
         "sh sh sh sh sh sh sh sh sh sh sh sh"
+        "pb pb pb pb pb pb pb pb pb pb pb ."
         "hl hl hl hl hl hl hl hl hl hl hl hl"
         "lp lp lp lp lp lp lp lp lp lp lp lp"
         "ff ff ff ff ff ff ff ff ff ff ff ff"
+}
+
+.grid-software-project{
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "pn pn pn pn pn pn pn pn pn pn pn pn"
+        ". pi pi pi pi pc pc pc pc pc pc pc"
+}
+
+.project-name{
+    grid-area: pn;
+}
+
+.project-image{
+    grid-area: pi;
+}
+
+.project-image > img {
+    width: 60%;
+}
+
+.project-content{
+    grid-area: pc;
 }
 
 .software-header{
@@ -258,6 +313,19 @@ body {
     background-color: white;
     padding: 10px;
 }
+
+.content p,li{
+    font-size: 24px;    
+    color: #545454;
+    text-align: justify;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content li{
+    width: 90%;
+}
+
 
 /* The "show" class is added to the filtered elements */
 .show {
