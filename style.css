@@ -138,40 +138,28 @@ body {
         "lh lh lh lh lh lh lh lh lh lh lh lh"
         "ap ap ap ap ap am am am am am am am"
         "lp lp lp lp lp lp lp lp lp lp lp lp"
-        "sh sh sh sh sh sh sh sh sh sh sh sh"
-        "pb pb pb pb pb pb pb pb pb pb pb pb"
+        ".  sh sh sh sh sh sh sh sh sh sh . "
+        ".  pb pb pb pb pb pb pb pb pb pb . "
         "lw lw lw lw lw lw lw lw lw lw lw lw"
-        "wx wx wx wx wx wx wx wx wx wx wx wx"
+        ".  wx wx wx wx wx wx wx wx wx wx . "
         "lv lv lv lv lv lv lv lv lv lv lv lv"
-        "vx vx vx vx vx vx vx vx vx vx vx vx"
+        ".  vx vx vx vx vx vx vx vx vx vx . "
         "lf lf lf lf lf lf lf lf lf lf lf lf"
 		"ff ff ff ff ff ff ff ff ff ff ff ff"
 }
 
 .grid-projects {
     grid-area: pb;
-    padding-left: 10%;
 }
 
 .grid-workxp{
     grid-area: wx;
-    padding-left: 10%;
 }
 
 .grid-volxp{
     grid-area: vx;
-    padding-left: 10%;
 }
 
-.links {
-    margin-right: 10%;
-    padding-top: 25px;
-}
-
-.links a {
-    padding-right: 10px;
-    padding-left: 10px;
-}
 
 .grid-software {
     display: grid;
@@ -181,9 +169,9 @@ body {
     grid-template-areas: 
         "hb hb hb hb hb hb hb hb hb hb hb hb"
         "lh lh lh lh lh lh lh lh lh lh lh lh"
-        "sh sh sh sh sh sh sh sh sh sh sh sh"
-        "pb pb pb pb pb pb pb pb pb pb pb ."
-        "hl hl hl hl hl hl hl hl hl hl hl hl"
+        ". sh sh sh sh sh sh sh sh sh sh  ."
+        ". pb pb pb pb pb pb pb pb pb pb  ."
+        ". hl hl hl hl hl hl hl hl hl hl  ."
         "lp lp lp lp lp lp lp lp lp lp lp lp"
         "ff ff ff ff ff ff ff ff ff ff ff ff"
 }
@@ -195,7 +183,7 @@ body {
     grid-template-rows: auto;
     grid-template-areas: 
         "pn pn pn pn pn pn pn pn pn pn pn pn"
-        ". pi pi pi pi pc pc pc pc pc pc pc"
+        ".  pi pi pi pi pc pc pc pc pc pc pc"
 }
 
 .project-name{
@@ -216,7 +204,6 @@ body {
 
 .software-header{
     grid-area: sh;
-    padding-left: 10%;
 }
 
 .software-header > img{
@@ -225,7 +212,6 @@ body {
 
 .homelink{
     grid-area: hl;
-    padding-left: 10%;
 }
 
 .grid-game {
@@ -236,24 +222,22 @@ body {
     grid-template-areas: 
         "hb hb hb hb hb hb hb hb hb hb hb hb"
         "lh lh lh lh lh lh lh lh lh lh lh lh"
-        "sh sh sh sh sh sh sh sh sh sh sh sh"
-        "gv gv gv gv gv gv gd gd gd gd gd gd"
-        ".  co co co co co co co co co co  ."
-        "hl hl hl hl hl hl hl hl hl hl hl hl"
+        ".  sh sh sh sh sh sh sh sh sh sh  ."
+        ".  gv gv gv gv gv gd gd gd gd gd  ."
+        ". pb pb pb pb pb pb pb pb pb pb  ."
+        ".  hl hl hl hl hl hl hl hl hl hl  ."
         "lp lp lp lp lp lp lp lp lp lp lp lp"
         "ff ff ff ff ff ff ff ff ff ff ff ff"
 }
 
 .game-visual{
     grid-area: gv;
-    padding-left: 20%;
 }
 
 .game-details{
     grid-area: gd;
-    width: 80%;
 
-    font-size: 30px;
+    font-size: 26px;
     
     color: #545454;
 }
@@ -297,7 +281,7 @@ body {
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 30%;
+    width: 33.33%;
     display: none; /* Hide columns by default */
 }
 
