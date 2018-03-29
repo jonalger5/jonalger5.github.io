@@ -23,6 +23,12 @@ h4 {
     font-size: 24px;
 }
 
+h5 {
+    font-family: 'Roboto', sans-serif;    
+    color: #545454;
+    font-size: 20px;
+}
+
 p {
     font-size: 20;
     font-weight: 700;
@@ -150,6 +156,21 @@ body {
 
 .grid-projects {
     grid-area: pb;
+}
+
+.grid-skills {
+    grid-area: rs;
+    background-color: #e0e2e5;
+    padding: 10px;
+    margin: 8px -16px;
+}
+
+.grid-skills li{
+    font-size: 16px;    
+    color: #545454;
+    text-align: justify;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .grid-workxp{
