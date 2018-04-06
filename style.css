@@ -116,12 +116,6 @@ body {
     font-weight: 500;
 }
 
-.disc > a {
-    color: #FF3B3F;
-    text-align: right;
-    font-size: 40;
-}
-
 .grid-foot {
     grid-area: ff;
     color: #545454;
@@ -207,6 +201,16 @@ body {
         ".  pi pi pi pi pc pc pc pc pc pc pc"
 }
 
+.grid-mobile-app{
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "pn pn pn pn pn pn pn pn pn pn pn pn"
+        ".  pi pi pi .  pc pc pc pc pc pc pc"
+}
+
 .project-name{
     grid-area: pn;
 }
@@ -266,23 +270,6 @@ body {
 .game-details > p {
     text-align: justify;
     font-weight: 500;
-}
-
-.contributions {
-    grid-area: co;
-    padding-left: 5%;
-}
-
-.contributions p,li{
-    font-size: 24px;    
-    color: #545454;
-    text-align: justify;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contributions li{
-    width: 90%;
 }
 
 * {
@@ -353,4 +340,78 @@ body {
 .btn.active {
   background-color: #666;
   color: white;
+}
+
+/* SLideshow CSS */
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next{font-size: 11px}
 }

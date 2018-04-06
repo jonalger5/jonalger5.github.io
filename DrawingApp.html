@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<title>Drawing Application</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="grid-software">
+		<header class="grid-header">
+			<div align="center">
+                    <h1> Jonathan Alger </h1>
+                    <h2> GAME ENGINEER </h2>
+			</div>			
+		</header>
+		<div class="lineheader">
+		</div>
+		
+		<div class="software-header">
+			<br>
+			<h3>Drawing Application - Fall 2017</h3>			 
+		</div>
+
+		<div class="grid-projects">
+			<div class="row">
+				<div class="content">
+					<div class="grid-mobile-app">						
+						<div class="project-image">
+							<div class="slideshow-container">
+								<div class="mySlides">
+								  <img src="Images/Drawing App/Drawing.png" style="width:100%">
+								  <h4 style="text-align: center;">Allow Users to Draw</h4>
+								</div>
+
+								<div class="mySlides">
+								  <img src="Images/Drawing App/Brush.png" style="width:100%">
+								  <h4 style="text-align: center;">Custom Brush Controller</h4>
+								</div>
+
+								<div class="mySlides">
+								  <img src="Images/Drawing App/UserDrawings.png" style="width:100%">
+								  <h4 style="text-align: center;">Store User Drawings</h4>
+								</div>
+
+								<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								<a class="next" onclick="plusSlides(1)">&#10095;</a>
+							</div>
+							<br>
+
+							<div style="text-align:center">
+							  <span class="dot" onclick="currentSlide(1)"></span> 
+							  <span class="dot" onclick="currentSlide(2)"></span> 
+							  <span class="dot" onclick="currentSlide(3)"></span> 
+							</div>
+						</div>
+						<div class="project-content">
+							<ul>
+								<li>
+									<p>Programmer (Kotlin) - Individual Project</p>
+								</li>
+								<br>
+								<li>
+									<p>Developed a drawing application using Android Studios</p>
+								</li>
+								<br>
+								<li>
+									<p>Created a custom brush controller to allow users to change their brush preferences</p>
+								</li>
+								<br>
+								<li>
+									<p>Uses Android's file system to save users drawings between app launches</p>
+								</li>
+								<br>
+								<li>
+									<p>Implemented a recycler view to show the users drawings</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="homelink">
+			<a href="index.html"><h4>Back to Main</h4></a> 
+		</div>
+
+		<div class="lineprojects">
+		</div>
+		<footer class="grid-foot">
+			<p><pre class="tab">jonathan alger &copy; 2018</pre></p>
+		</footer>
+	</div>
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+</html>
