@@ -415,3 +415,64 @@ img {
 @media only screen and (max-width: 300px) {
   .prev, .next{font-size: 11px}
 }
+/* Gallery CSS */
+/* Position the image container (needed to position the left and right arrows) */
+.gallery_container {
+  position: relative;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.gal_prev,
+.gal_next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.gal_next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.gal_prev:hover,
+.gal_next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gal_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.gal_column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.gal_demo {
+  opacity: 0.6;
+}
+
+.gal_active,
+.gal_demo:hover {
+  opacity: 1;
+}
